@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#container {
+    height: 60vh;
+}
+
+
+header {
+    height: 4rem;
+}
+
+#product {
+    height: 300px;
+    width:220px;
+}
+
+#description {
+    margin: 0 28%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #toolbar {
+        flex-direction: column;
+    }
+
+    #dropdown {
+        margin-top: 1rem;
+    }
+
+    header {
+        height: 4rem;
+    }
+}

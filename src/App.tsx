@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from 'react';
+import '../src/assets/styles/index.css';
 
-function App() {
+import Home from './pages/Home';
+import ProductPage from './pages/ProductPage';
+import Register from './pages/Register';
+import Error from './pages/Error';
+
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import { Header } from './components/header'
+
+
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="bg-slate-100 relative overflow-hidden h-screen">
+     <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="new-product" element={<Register/>}/>
+        <Route path="product/:id" element={<ProductPage/>}/>
+        <Route path="*" element={<Error/>}/>  
+      </Routes> 
+    </main>
   );
 }
 

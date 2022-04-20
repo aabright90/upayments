@@ -1,0 +1,14 @@
+#addbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    background: black;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+}
